@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h3>Product Details</h3>
+    </div>
+    <div class="card-body">
+      <div *ngIf="product">
+        <h4>Name: {{ product.proName }}</h4>
+        <p><strong>Price:</strong> {{ product.price }}</p>
+        <p><strong>Brand:</strong> {{ product.band }}</p>
+      </div>
+      <div *ngIf="!product">
+        <p>Product not found.</p>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+        <a routerLink="/profile" class="btn btn-secondary">Back to Products</a>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="dashboard">
+    <h2>Welcome, {{ user?.name }}</h2>
+    
+    <div class="profile-section">
+      <img [src]="user?.profilePic" alt="Profile Picture" class="profile-pic">
+      <input type="file" (change)="changeProfilePic($event)">
+    </div>
+    
+    <p><strong>Email:</strong> {{ user?.email }}</p>
+    
+    <button (click)="logout()">Logout</button>
+</div>

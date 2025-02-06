@@ -1,0 +1,33 @@
+<div class="w-50 p-3 rounded shadow mx-auto">
+    <h1>Product Form</h1>
+    <form>
+        <div class="form-group my-2">
+            <input type="text" class="form-control py-3" name="proName" [(ngModel)]="proName" placeholder="Product Name">
+        </div>
+        <div class="form-group my-2">
+            <input type="text" class="form-control py-3" name="price" [(ngModel)]="price" placeholder="Price">
+        </div>
+        <div class="form-group my-2">
+            <input type="text" class="form-control py-3" name="band" [(ngModel)]="band" placeholder="Brand Name">
+        </div>
+        <button (click)="addProduct()" class="btn btn-primary py-2" type="button">Add Product</button>
+    </form>
+</div>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Brand Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.proName }}</td>
+      <td>${{ product.price }}</td>
+      <td>{{ product.band }}</td>
+      <td><button (click)="viewProduct(product)">View</button></td>
+    </tr>
+  </tbody>
+</table>

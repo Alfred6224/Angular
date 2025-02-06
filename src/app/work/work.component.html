@@ -1,0 +1,56 @@
+<p>work works!</p>
+<div *ngIf="isLogin">
+    <h1>Sign Up</h1>
+</div>
+<div *ngIf="!isLogin">
+    <h1>Sign In</h1>
+</div>
+
+
+
+<button (click)="toggleForm()">
+    <span *ngIf="isLogin">Login</span>
+    <span *ngIf="!isLogin">Register</span>
+</button>
+
+<div *ngFor="let stud of students, let i = index" >
+    {{ i + 1 }} {{ stud }} 
+</div>
+
+<!-- <div>
+    <h1>Today is {{date.getDate()}}</h1>
+    <h1>Today is {{date.getDay()}}</h1>
+    <h1>Today is {{date.tolocaleDateString()}}</h1>
+</div> -->
+
+<div>
+    <h1>Today is {{ date.getDate() }}</h1>
+    <!-- <h1>Numeric Day: {{ date.getDay() }}</h1> -->
+    <div [ngSwitch]="day">
+        <h1 *ngSwitchCase="0">Today is Sunday</h1>
+        <h1 *ngSwitchCase="1">Today is Monday</h1>
+        <h1 *ngSwitchCase="2">Today is Tuesday</h1>
+        <h1 *ngSwitchCase="3">Today is Wednesday</h1>
+        <h1 *ngSwitchCase="4">Today is Thursday</h1>
+        <h1 *ngSwitchCase="5">Today is Friday</h1>
+        <h1 *ngSwitchCase="6">Today is Saturday</h1>
+    </div>
+    <h1>Today's Date: {{ date.toLocaleDateString() }}</h1>    
+</div>
+
+<table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Qualified</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of arrObj" [ngClass]="{'highlight': person.qualified}">
+        <td>{{ person.name }}</td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.qualified ? 'Yes' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,16 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  .highlight {
+    background-color: red;
+    color: white;
+  }
+  

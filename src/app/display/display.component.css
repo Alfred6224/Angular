@@ -1,0 +1,22 @@
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  .card-header {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .card-body {
+    font-size: 1.1em;
+  }
+  
+  .card-footer {
+    padding: 10px;
+  }
+  

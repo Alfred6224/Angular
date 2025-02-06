@@ -1,4 +1,4 @@
-h1{
+/* h1{
     font-size: 80px;
     color: red;
 }
@@ -7,3 +7,14 @@ h1{
     height: 50vh;
     background-color: grey;
 }
+.for{
+    width: fit-content;
+    height: fit-content;
+    background-color: bisque;
+    padding: 15px;
+    line-height: 2;
+    border-radius: 10px;
+}
+.for input{
+    margin-left: 5px;
+} */

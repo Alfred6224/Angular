@@ -6,4 +6,43 @@
     <p>{{ date.toLocaleDateString }}</p>
     <p>{{ name.slice(0, 4) }}</p>
 
+    <h1>{{name2}}</h1>
+
+    <h3>{{right === true ? 'yes' : 'no'}}</h3>
+
+    <input type="text" [(ngModel)]="input">
+    <p>{{ input }}</p>
+
+    <div action="" class="for">
+        <div>
+            <label for="">Firstname:</label>
+            <input type="text" name="" id="" [(ngModel)]="firstname">
+        </div>
+        <div>
+            <label for="">Lastname:</label>
+            <input type="text" name="" id="" [(ngModel)]="lastname">
+        </div>
+        <div>
+            <label for="">Middlename:</label>
+            <input type="text" name="" id="" [(ngModel)]="middlename">
+        </div>
+        <button (click)="AddUser()">AddUser</button>
+    </div>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Middlename</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of UserList">
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.middlename }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
